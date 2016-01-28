@@ -12,13 +12,19 @@
 
 - (instancetype)init {
     
-    self = [super init];
+    self = [self initWithName:@"" latitude:0 longitude:0];
     return self;
 }
 
 - (instancetype)initWithName:(NSString *)name latitude:(CGFloat)latitude longitude:(CGFloat)longitude {
     
     self = [super init];
+    if (self) {
+        _name = name;
+        _latitude = latitude;
+        _longitude = longitude;
+        _trivia = [NSMutableArray array];
+    }
     return self;
 }
 
