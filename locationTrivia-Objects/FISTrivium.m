@@ -10,4 +10,16 @@
 
 @implementation FISTrivium
 
+- (instancetype)init {
+    
+    self = [super init];
+    return self;
+}
+
+- (instancetype)initWithContent:(NSString *)content likes:(NSUInteger)likes {
+    
+    self = [super init];
+    return self;
+}
+
 @end

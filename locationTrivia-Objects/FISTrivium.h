@@ -11,4 +11,6 @@
 @interface FISTrivium : NSObject
 @property (nonatomic, strong) NSString *content;
 @property (nonatomic) NSUInteger likes;
+- (instancetype)init;
+- (instancetype)initWithContent:(NSString *)content likes:(NSUInteger)likes;
 @end
