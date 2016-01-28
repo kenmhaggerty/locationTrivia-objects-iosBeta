@@ -40,7 +40,10 @@
 
 - (FISTrivium *)triviumWithMostLikes {
     
-    return nil;
+    if (!self.trivia.count) return nil;
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(likes)) ascending:NO];
+    return [[self.trivia sortedArrayUsingDescriptors:@[sortDescriptor]] firstObject];
 }
 
 @end
