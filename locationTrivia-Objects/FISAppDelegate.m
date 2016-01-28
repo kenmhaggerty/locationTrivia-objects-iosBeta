@@ -32,7 +32,13 @@
 
 - (NSArray *)locationsNearLatitude:(CGFloat)latitude longitude:(CGFloat)longitude margin:(CGFloat)margin {
     
-    return nil;
+    NSMutableArray *locations = [NSMutableArray array];
+    for (FISLocation *location in self.locations) {
+        if ((fabs(location.latitude-latitude) <= margin) && (fabs(location.longitude-longitude) <= margin)) {
+            [locations addObject:location];
+        }
+    }
+    return locations;
 }
 
 @end
