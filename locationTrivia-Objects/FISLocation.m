@@ -35,7 +35,7 @@
 
 - (BOOL)hasValidData {
     
-    return NO;
+    return (self.name && self.name.length && (fabs(self.latitude) <= 90.0) && (fabs(self.longitude) <= 180) && (self.longitude != -180));
 }
 
 - (FISTrivium *)triviumWithMostLikes {
