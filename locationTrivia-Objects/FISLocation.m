@@ -30,7 +30,7 @@
 
 - (NSString *)stringByTruncatingNameToLength:(NSUInteger)length {
     
-    return nil;
+    return [self.name substringToIndex:MIN(length, self.name.length)];
 }
 
 - (BOOL)hasValidData {
