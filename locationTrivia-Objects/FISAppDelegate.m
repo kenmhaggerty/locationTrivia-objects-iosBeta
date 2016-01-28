@@ -21,6 +21,12 @@
 
 - (FISLocation *)locationNamed:(NSString *)name {
     
+    for (FISLocation *location in self.locations) {
+        if ([location.name isEqualToString:name]) {
+            return location;
+        }
+    }
+    
     return nil;
 }
 
